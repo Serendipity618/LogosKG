@@ -214,26 +214,6 @@ class KnowledgeGraphRetrievalBaselinesCPU:
         start_set = set(start_cuis)
         return [self.id_to_entity[i] for i in idx if self.id_to_entity[i] not in start_set]
 
-    # ---------- Neo4j ----------
-    # def neo4j_khop(self, seeds, k):
-    #     if k <= 0 or not seeds:
-    #         return []
-    #
-    #     query = f"""
-    #     MATCH (s)-[*{k}..{k}]->(n)
-    #     WHERE s.id IN $seeds AND NOT n.id IN $seeds
-    #     RETURN DISTINCT n.id
-    #     """
-    #
-    #     password = os.environ.get("NEO4J_PASS", "Persevere19940618#")
-    #
-    #     with GraphDatabase.driver("bolt://127.0.0.1:7687", auth=("neo4j", password)) as driver:
-    #         with driver.session() as session:
-    #             result = session.run(query, seeds=seeds)
-    #             nodes = [r["n.id"] for r in result]
-    #
-    #     return nodes
-
     def neo4j_khop(self, seeds, k, within=False):
         if k <= 0 or not seeds:
             return []
