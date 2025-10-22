@@ -60,5 +60,7 @@ LogosKG-Torch       1.0000       1.0000       1.0000       1.0000       1.0000
 - `LogosKG_large.py` is provided for completeness but is not needed to reproduce the results in `main.py`.
 
 ## License
-
-This repository is intended solely for anonymous academic review. Please refer to the accompanying paper for more information.
+Restrictive Non-Commercial Academic Review License
+Copyright © 2025. All rights reserved.
+This code is provided solely for anonymous peer review of the accompanying paper submission.
+Prohibited: Commercial use, distribution, sharing, modification, and retention after review.
